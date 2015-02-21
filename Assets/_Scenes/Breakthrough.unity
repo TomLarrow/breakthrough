@@ -86,6 +86,7 @@ GameObject:
   - 65: {fileID: 75037271}
   - 23: {fileID: 75037270}
   - 54: {fileID: 75037274}
+  - 114: {fileID: 75037275}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -143,7 +144,7 @@ Transform:
   m_LocalScale: {x: .25, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!54 &75037274
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -154,11 +155,22 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 56
   m_CollisionDetection: 0
+--- !u!114 &75037275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75037269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bd6e002ec765c4c971f025482b4213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &101617061
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +285,7 @@ Transform:
   - {fileID: 101617065}
   - {fileID: 1969000418}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &586584494
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1406101515
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +432,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1593902938
 GameObject:
   m_ObjectHideFlags: 0
