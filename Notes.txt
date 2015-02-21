@@ -1,0 +1,16 @@
+The goal of this game is to do a Breakout style game with a few twists.  
+I want to test Unity's physics engine (probably 2d)
+
+There are a billion tutorials out there for creating a breakout game in Unity, I want to build this by testing what I know, and what I can discover, not what I can copy from a tutorial.
+
+The basic design of the game is to turn Breakout 90 degrees counter clockwise: with the paddle on the right hand side of the playfield, walls on top bottom, and left side, and the bricks stacked vertically in several rows on the left side of the screen.
+
+The playfield will have gravity enabled pulling the ball down towards the bottom of the screen, and the walls will impart reflecting force, so that the ball bounces off of them and keeps going.  The goal is to have the ball bouncing in parabolic shapes, rather than the straight angles normally found in breakout.
+
+The player's paddle in addition to moving up and down, will have the ability to move left and right as well through the rightmost quarter of the screen.  This lets the player impart force, air-hockey style to the ball.  Thinking of giving the player the ability to rotate the paddle some as well using the mousewheel.  We'll have to see how that plays out.
+
+The bricks on the left hand side of the screen are not static, but affected by gravity as well.  If the player knocks out the bottom most brick, the rest of the bricks shift down "Tetris style" under the effect of gravity.  Since gravity will be pulling the ball down, this opens up the holes in the brick rows along the top, allowing the skilled player the ability to shoot his ball through those newly opened holes.
+
+
+
+
