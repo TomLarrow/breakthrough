@@ -363,7 +363,7 @@ GameObject:
   - 23: {fileID: 963524032}
   - 54: {fileID: 963524036}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +395,7 @@ CapsuleCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 963524031}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1ee2f5690882e084fb87d404b2b0c75f, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
