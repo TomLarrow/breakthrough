@@ -9,6 +9,9 @@ public class Paddle : MonoBehaviour
     {
         // Set the position of the paddle to match the ScreenToWorldPoint of the mouse   
         var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //mousePos = (Mathf.Clamp (mousePos.x, 18f, 32f), Mathf.Clamp (mousePos.y, -20f, 20f), 0);  Not quite sure why I can't set this in one line, I'll figure it out later
+        mousePos.x = Mathf.Clamp(mousePos.x, 18f, 32f);
+        mousePos.y = Mathf.Clamp(mousePos.y, -20f, 20f);
         mousePos.z = 0;
         //Debug.Log(mousePos);
         rigidbody.MovePosition(mousePos);
