@@ -643,6 +643,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6715c16313b23a344926b8d72ed294b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brick: {fileID: 103406, guid: 5f4f4b9f51c10134f9bbf9e7f724f08e, type: 2}
+  xPosition: -18
+  yPosition: 22
+  numBricks: 4
+  numColumns: 1
+  verticalDistance: 4
+  horizontalDistance: 3
 --- !u!4 &1715068359
 Transform:
   m_ObjectHideFlags: 0
