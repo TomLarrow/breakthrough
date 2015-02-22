@@ -646,10 +646,10 @@ MonoBehaviour:
   brick: {fileID: 103406, guid: 5f4f4b9f51c10134f9bbf9e7f724f08e, type: 2}
   xPosition: -18
   yPosition: 22
-  numBricks: 4
-  numColumns: 1
+  numBricks: 12
+  numColumns: 3
   verticalDistance: 4
-  horizontalDistance: 3
+  horizontalDistance: 4
 --- !u!4 &1715068359
 Transform:
   m_ObjectHideFlags: 0

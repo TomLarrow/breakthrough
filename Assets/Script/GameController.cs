@@ -14,7 +14,10 @@ public class GameController : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        spawnBlockColumn(xPosition, yPosition, numBricks);
+        for (int i = 0; i < numColumns; i++)
+        {
+            spawnBlockColumn(xPosition - (i * horizontalDistance), yPosition + ( 1.5f * i * verticalDistance), numBricks);
+        }
 	}
 	
     // Spawn a row of blocks
