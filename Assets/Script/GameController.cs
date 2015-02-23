@@ -3,29 +3,42 @@ using System.Collections;
 
 public class GameController : MonoBehaviour 
 {
-    public GameObject brick;
-    public float xPosition;
-    public float yPosition;
-    public int numBricks;
-    public int numColumns;
-    public float verticalDistance;
-    public float horizontalDistance;
+    [SerializeField]
+    private GameObject brick;
+
+    [SerializeField]
+    private float xPosition;
+
+    [SerializeField]
+    private float yPosition;
+
+    [SerializeField]
+    private int numBricks;
+
+    [SerializeField]
+    private int numColumns;
+
+    [SerializeField]
+    private float verticalDistance;
+
+    [SerializeField]
+    private float horizontalDistance;
 
 	// Use this for initialization
 	void Start () 
     {
         for (int i = 0; i < numColumns; i++)
         {
-            spawnBlockColumn(xPosition - (i * horizontalDistance), yPosition + ( 1.5f * i * verticalDistance), numBricks);
+            SpawnBlockColumn(xPosition - (i * horizontalDistance), yPosition + ( 1.5f * i * verticalDistance));
         }
 	}
 	
     // Spawn a row of blocks
-    void spawnBlockColumn (float xPos, float yPos, int numBlocks)
+    void SpawnBlockColumn (float _xPos, float _yPos)
     {
-        for (int i = 0; i < numBlocks; i++)
+        for (int i = 0; i < numBricks; i++)
         {
-            Instantiate(brick, new Vector3(xPos, yPos + (i * verticalDistance), 0), Quaternion.identity);
+            Instantiate(brick, new Vector3(_xPos, _yPos + (i * verticalDistance), 0), Quaternion.identity);
         }
     }
 }
