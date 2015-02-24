@@ -36,6 +36,13 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private float horizontalDistance;
 
+    public static GameController instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
 	// Use this for initialization
 	void Start () 
     {
@@ -44,7 +51,7 @@ public class GameController : MonoBehaviour
             SpawnBlockColumn(brickXPosition - (i * horizontalDistance), brickYPosition + ( 1.5f * i * verticalDistance));
         }
 
-        StartCoroutine(SpawnBall(ballXPosition, ballYPosition));
+        NewBall();
 	}
 	
     // Spawn a row of blocks
@@ -57,6 +64,11 @@ public class GameController : MonoBehaviour
     }
 
     // Spawn the ball
+    public static void NewBall ()
+    {
+        instance.StartCoroutine(instance.SpawnBall(instance.ballXPosition, instance.ballYPosition));
+    }
+    
     IEnumerator SpawnBall(float _xPos, float _yPos)
     {
         yield return new WaitForSeconds(ballWait);

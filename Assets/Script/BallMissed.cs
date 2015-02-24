@@ -9,6 +9,7 @@ public class BallMissed : MonoBehaviour
         if (collider.tag == "Player")
         {
             Destroy(collider.gameObject);
+            GameController.NewBall();
         }
     }
 }
