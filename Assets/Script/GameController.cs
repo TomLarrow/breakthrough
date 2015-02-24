@@ -10,6 +10,9 @@ public class GameController : MonoBehaviour
     private GameObject ball;
 
     [SerializeField]
+    private int numLives;
+
+    [SerializeField]
     private float ballXPosition;
 
     [SerializeField]
@@ -66,7 +69,11 @@ public class GameController : MonoBehaviour
     // Spawn the ball
     public static void NewBall ()
     {
-        instance.StartCoroutine(instance.SpawnBall(instance.ballXPosition, instance.ballYPosition));
+        if (instance.numLives > 0)
+        {
+            instance.StartCoroutine(instance.SpawnBall(instance.ballXPosition, instance.ballYPosition));
+            instance.numLives--;
+        }
     }
     
     IEnumerator SpawnBall(float _xPos, float _yPos)

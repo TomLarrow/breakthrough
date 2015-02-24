@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brick: {fileID: 103406, guid: 5f4f4b9f51c10134f9bbf9e7f724f08e, type: 2}
   ball: {fileID: 163050, guid: 1aba4c49e7a8bdc4fa7c10677a418371, type: 2}
+  numLives: 5
   ballXPosition: 25
   ballYPosition: 0
   brickXPosition: -18
