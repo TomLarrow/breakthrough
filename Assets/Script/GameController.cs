@@ -7,10 +7,19 @@ public class GameController : MonoBehaviour
     private GameObject brick;
 
     [SerializeField]
-    private float xPosition;
+    private GameObject ball;
 
     [SerializeField]
-    private float yPosition;
+    private float ballXPosition;
+
+    [SerializeField]
+    private float ballYPosition;
+
+    [SerializeField]
+    private float brickXPosition;
+
+    [SerializeField]
+    private float brickYPosition;
 
     [SerializeField]
     private int numBricks;
@@ -29,8 +38,10 @@ public class GameController : MonoBehaviour
     {
         for (int i = 0; i < numColumns; i++)
         {
-            SpawnBlockColumn(xPosition - (i * horizontalDistance), yPosition + ( 1.5f * i * verticalDistance));
+            SpawnBlockColumn(brickXPosition - (i * horizontalDistance), brickYPosition + ( 1.5f * i * verticalDistance));
         }
+
+        SpawnBall(ballXPosition, ballYPosition);
 	}
 	
     // Spawn a row of blocks
@@ -40,5 +51,11 @@ public class GameController : MonoBehaviour
         {
             Instantiate(brick, new Vector3(_xPos, _yPos + (i * verticalDistance), 0), Quaternion.identity);
         }
+    }
+
+    // Spawn the ball
+    void SpawnBall (float _xPos, float _yPos)
+    {
+        Instantiate(ball, new Vector3(_xPos, _yPos, 0), Quaternion.identity);
     }
 }
