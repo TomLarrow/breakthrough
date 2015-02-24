@@ -551,6 +551,7 @@ MonoBehaviour:
   ballXPosition: 25
   ballYPosition: 0
   brickXPosition: -18
+  ballWait: 2
   brickYPosition: 22
   numBricks: 12
   numColumns: 3

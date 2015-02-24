@@ -19,6 +19,9 @@ public class GameController : MonoBehaviour
     private float brickXPosition;
 
     [SerializeField]
+    private float ballWait;
+
+    [SerializeField]
     private float brickYPosition;
 
     [SerializeField]
@@ -41,7 +44,7 @@ public class GameController : MonoBehaviour
             SpawnBlockColumn(brickXPosition - (i * horizontalDistance), brickYPosition + ( 1.5f * i * verticalDistance));
         }
 
-        SpawnBall(ballXPosition, ballYPosition);
+        StartCoroutine(SpawnBall(ballXPosition, ballYPosition));
 	}
 	
     // Spawn a row of blocks
@@ -54,8 +57,11 @@ public class GameController : MonoBehaviour
     }
 
     // Spawn the ball
-    void SpawnBall (float _xPos, float _yPos)
+    IEnumerator SpawnBall(float _xPos, float _yPos)
     {
+        Debug.Log("Before Wait");
+        yield return new WaitForSeconds(ballWait);
+        Debug.Log("After Wait");
         Instantiate(ball, new Vector3(_xPos, _yPos, 0), Quaternion.identity);
     }
 }
