@@ -6,7 +6,7 @@ public class BallMissed : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.tag == "Player")
+        if (collider.tag == "Ball")
         {
             Destroy(collider.gameObject);
             GameController.NewBall();
