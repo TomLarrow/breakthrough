@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Ball : MonoBehaviour 
-{
+{ 
     void OnCollisionEnter(Collision collision)
     {
         
@@ -18,4 +18,11 @@ public class Ball : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "Finish") 
+        {
+            Destroy(gameObject);
+        }
+    }
 }
