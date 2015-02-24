@@ -17,12 +17,4 @@ public class Ball : MonoBehaviour
             Destroy(collision.collider.gameObject);
         }
     }
-
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.tag == "Finish") 
-        {
-            Destroy(gameObject);
-        }
-    }
 }
