@@ -59,9 +59,7 @@ public class GameController : MonoBehaviour
     // Spawn the ball
     IEnumerator SpawnBall(float _xPos, float _yPos)
     {
-        Debug.Log("Before Wait");
         yield return new WaitForSeconds(ballWait);
-        Debug.Log("After Wait");
         Instantiate(ball, new Vector3(_xPos, _yPos, 0), Quaternion.identity);
     }
 }
